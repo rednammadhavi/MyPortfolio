@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="h-[50vh] pt-3 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]">
+      <div className="h-[70vh] pt-3 bg-cover bg-center bg-[url('/body.avif')]">
         <div className="flex flex-col items-start justify-center h-full bg-black bg-opacity-50 pl-[10vw]">
           <h3 className="text-white text-4xl font-light">Hello, I am</h3>
           <h1 className="text-gray-400 text-6xl font-bold">NAGA MADHAVI REDNAM</h1>
