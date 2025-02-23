@@ -5,6 +5,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Connect from './components/Connect'
 import Footer from './components/Footer'
+import Home from './components/Home'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <>
       <Navbar />
       <div className='min-h-screen'>
+        <Home />
         <About />
         <Skills />
         <Projects />
