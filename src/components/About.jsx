@@ -27,15 +27,15 @@ const About = () => {
         <h1 className="text-2xl font-bold text-red-700 mb-2">Education</h1>
         <div className="text-justify space-y-2">
           <div className='flex flex-col py-1'>
-            <span className='text-sm font-extralight text-red-700'>2026</span>
+            <span className='text-sm font-extralight text-red-700'>2022 - 2026</span>
             <h1 className="font-semibold text-sm">Btech (CSE - AI & ML) : <span className="font-light">Pragati Engineering College, Kakinada</span></h1>
           </div>
           <div className='flex flex-col py-1'>
-            <span className='text-sm font-extralight text-red-700'>2022</span>
-            <h1 className="font-semibold text-sm">Intermediate : <span className="font-light">Madhuri Junior College, GOllaprolu</span></h1>
+            <span className='text-sm font-extralight text-red-700'>2020 - 2022</span>
+            <h1 className="font-semibold text-sm">Intermediate : <span className="font-light">Madhuri Junior College, Gollaprolu</span></h1>
           </div>
           <div className='flex flex-col py-1'>
-            <span className='text-sm  font-extralight text-red-700'>2020</span>
+            <span className='text-sm  font-extralight text-red-700'>2019 - 2020</span>
             <h1 className="font-semibold text-sm">10th Borad : <span className="font-light">Madhuri Vidyalaya, Gollaprolu</span></h1>
           </div>
         </div>
