@@ -11,16 +11,16 @@ const Footer = () => {
 
                     <div className="flex items-center gap-4">
                         <a href="https://github.com/Rednam-madhavi" target="_blank" rel="noopener noreferrer">
-                            <img src="/src/assets/github.svg" alt="GitHub" className="w-6 md:w-7 hover:scale-110 transition-transform duration-200" />
+                            <img src="/assets/github.svg" alt="GitHub" className="w-6 md:w-7 hover:scale-110 transition-transform duration-200" />
                         </a>
                         <a href="https://www.linkedin.com/in/rednam-naga-madhavi-242825318/" target="_blank" rel="noopener noreferrer">
-                            <img src="/src/assets/linkedin.svg" alt="LinkedIn" className="w-6 md:w-7 hover:scale-110 transition-transform duration-200" />
+                            <img src="/assets/linkedin.svg" alt="LinkedIn" className="w-6 md:w-7 hover:scale-110 transition-transform duration-200" />
                         </a>
                         <a href="https://leetcode.com/u/rednammadhavi/" target="_blank" rel="noopener noreferrer">
-                            <img src="/src/assets/leetcode.svg" alt="LeetCode" className="w-6 md:w-7 hover:scale-110 transition-transform duration-200" />
+                            <img src="/assets/leetcode.svg" alt="LeetCode" className="w-6 md:w-7 hover:scale-110 transition-transform duration-200" />
                         </a>
                         <a href="https://www.hackerrank.com/profile/22A31A42E8" target="_blank" rel="noopener noreferrer">
-                            <img src="/src/assets/hackerrank.svg" alt="HackerRank" className="w-6 md:w-7 hover:scale-110 transition-transform duration-200" />
+                            <img src="/assets/hackerrank.svg" alt="HackerRank" className="w-6 md:w-7 hover:scale-110 transition-transform duration-200" />
                         </a>
                     </div>
 
