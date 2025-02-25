@@ -9,7 +9,7 @@ const technicalSkills = {
 
 const softSkills = [
   "Communication", "Adaptability", "Critical Thinking",
-  "Team Collaboration", "Self-Motivation", "Communication", "Time Management",
+  "Team Collaboration", "Self-Motivation", "Time Management",
   "Problem-Solving", "Leadership", "Creativity"
 ];
 
