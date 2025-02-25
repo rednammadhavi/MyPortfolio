@@ -35,7 +35,7 @@ const Connect = () => {
           <MapPin size={30} className="text-pink-900 mb-3" />
           <h2 className="text-xl font-semibold text-pink-900 mb-2">Location</h2>
           <a
-            className="text-lg text-black font-medium hover:text-pink-800 transition-all duration-200"
+            className="text-lg text-black font-medium hover:text-pink-800 transition-all duration-200 cursor-pointer"
           >
             Kakinada, India
           </a>
