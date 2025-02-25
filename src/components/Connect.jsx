@@ -3,8 +3,8 @@ import { Mail, Smartphone, MapPin } from "lucide-react";
 
 const Connect = () => {
   return (
-    <div className="bg-white text-black w-full flex flex-col items-center justify-center  p-6">
-      <h1 className="text-4xl font-bold text-center mb-8 text-pink-900">
+    <div className="text-black w-full flex flex-col items-center justify-center p-6 py-14">
+      <h1 className="text-4xl font-semibold text-center mb-8">
         Connect with Me
       </h1>
 
@@ -14,7 +14,7 @@ const Connect = () => {
           <h2 className="text-xl font-semibold text-pink-900 mb-2">Email</h2>
           <a
             href="mailto:rednammadhavi@gmail.com"
-            className="text-lg text-black font-medium hover:text-pink-800 transition-all duration-200"
+            className="text-lg text-black font-medium hover:text-gray-800 hover:scale-105 transition-all duration-200"
           >
             rednammadhavi@gmail.com
           </a>
@@ -25,7 +25,7 @@ const Connect = () => {
           <h2 className="text-xl font-semibold text-pink-900 mb-2">Phone</h2>
           <a
             href="tel:+919100736575"
-            className="text-lg text-black font-medium hover:text-pink-800 transition-all duration-200"
+            className="text-lg text-black font-medium hover:text-gray-800 hover:scale-105 transition-all duration-200"
           >
             +91 9100736575
           </a>
@@ -35,7 +35,8 @@ const Connect = () => {
           <MapPin size={30} className="text-pink-900 mb-3" />
           <h2 className="text-xl font-semibold text-pink-900 mb-2">Location</h2>
           <a
-            className="text-lg text-black font-medium hover:text-pink-800 transition-all duration-200 cursor-pointer"
+            href="https://shorturl.at/MbfnO"
+            className="text-lg text-black font-medium hover:text-gray-800 hover:scale-105 transition-all duration-200 cursor-pointer"
           >
             Kakinada, India
           </a>

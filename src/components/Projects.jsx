@@ -11,7 +11,7 @@ const Projects = () => {
     },
     {
       name: "ECHONEWS",
-      link: "https://echonews-daily-news-app.vercel.app/",
+      link: "/src/assets/Echonews.mp4",
       code: "https://github.com/Rednam-madhavi/EchoNews",
       description: "EchoNews is a simple and easy-to-use news app that keeps you updated in real time. Built with React and Bootstrap, it lets you browse news by category, search for topics, and enjoy a smooth reading experience on any device."
     },
@@ -30,7 +30,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="bg-white text-black w-full p-6 flex flex-col items-center">
+    <div className="  text-black w-full py-14 flex flex-col items-center">
       <h1 className="text-4xl font-semibold text-center mb-6">Projects</h1>
       <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6 p-2">
         {projects.map((project, index) => (
@@ -41,13 +41,13 @@ const Projects = () => {
               <a
                 href={project.link}
                 target="_blank"
-                className='bg-pink-900 text-white px-4 py-2 rounded-lg hover:bg-pink-800 transition-all'>
+                className='bg-pink-900 text-white px-4 py-2 rounded-lg hover:bg-pink-800 transition-all hover:scale-105'>
                 Visit
               </a>
               <a
                 href={project.code}
                 target="_blank"
-                className='bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-all'>
+                className='bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-all hover:scale-105'>
                 Code
               </a>
             </div>

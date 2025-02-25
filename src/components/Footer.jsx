@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <>
-            <div className="bg-white text-black w-full p-4 flex flex-col items-center">
+            <div className="  text-black w-full p-4 flex flex-col items-center">
 
                 <div className="w-full flex flex-col md:flex-row items-center justify-center gap-4 p-3 md:px-16 text-center">
 
@@ -26,8 +26,8 @@ const Footer = () => {
 
                 </div>
             </div>
-            <div className="bg-white w-full flex flex-col md:flex-row items-center justify-center p-4 pt-0 md:px-16 text-pink-600 gap-2">
-                <span className="text-lg md:text-xl font-semibold hover:text-pink-500 transition-colors duration-200">
+            <div className="  w-full flex flex-col md:flex-row items-center justify-center p-4 pt-0 md:px-16 text-pink-900 gap-2">
+                <span className="text-lg md:text-xl font-semibold">
                     Thanks for Visiting.
                 </span>
             </div>
