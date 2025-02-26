@@ -7,7 +7,7 @@ const Home = () => {
   };
 
   return (
-    <div className="md:px-[10vw] p-10 pt-0 min-h-[90vh] flex flex-col md:flex-row items-center justify-around  text-black w-full py-12">
+    <div className="md:px-[10vw] p-10 pt-0 min-h-[90vh] flex flex-col md:flex-row items-center justify-around text-black w-full py-12">
 
       <div className="text-center md:text-left flex flex-col items-center md:items-start space-y-4">
         <h3 className="text-gray-700 text-2xl md:text-4xl font-light">Hello, I am</h3>

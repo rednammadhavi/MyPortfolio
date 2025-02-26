@@ -2,8 +2,8 @@ import React from "react";
 
 const technicalSkills = {
   "Programming Languages": ["Python", "Java", "C", "HTML", "CSS", "JavaScript"],
-  "Libraries & Frameworks": ["jQuery", "React", "Node", "Express", "Next.js"],
-  "Tools & Platforms": ["Git", "GitHub", "VS Code"],
+  "Libraries & Frameworks": ["Bootstrap", "Tailwind Css", "jQuery", "React", "Node", "Express", "Next.js"],
+  "Tools & Platforms": ["Git", "GitHub", "Figma", "VS Code"],
   "Databases": ["MySQL", "MongoDB"]
 };
 
