@@ -21,12 +21,13 @@ const Home = () => {
         <a
           href="/resume.pdf"
           target="_blank"
-          rel="noopener noreferrer"
+          // rel="noopener noreferrer"
           className="bg-pink-700 rounded-full px-6 py-3 text-white font-medium flex items-center gap-3 transition-all duration-300 hover:bg-pink-600 hover:scale-105 shadow-md"
         >
           <FileUser size={22} />
           View Resume
         </a>
+
       </div>
 
       <div className=" md:mt-0 flex justify-center">
