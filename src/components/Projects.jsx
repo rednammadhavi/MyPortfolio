@@ -4,13 +4,13 @@ const Projects = () => {
 
   const projects = [
     {
-      name: "TEXTIFY",
+      name: "Textify",
       link: "https://textify-two.vercel.app/",
       code: "https://github.com/Rednam-madhavi/Textify",
       description: "Textify is a simple React app that helps you edit text quickly. It lets you change text case, count words, remove extra spaces, switch to dark mode, and copy with one click."
     },
     {
-      name: "ECHONEWS",
+      name: "EchoNews",
       link: "https://drive.google.com/file/d/1UEQOhJ_MLKtV6Pi2u1YlORbWZkbzM8Rv/view?usp=sharing",
       code: "https://github.com/Rednam-madhavi/EchoNews",
       description: "EchoNews is a simple and easy-to-use news app that keeps you updated in real time. Built with React and Bootstrap, it lets you browse news by category, search for topics, and enjoy a smooth reading experience on any device."
