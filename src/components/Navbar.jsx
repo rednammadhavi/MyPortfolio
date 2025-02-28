@@ -35,10 +35,10 @@ const Navbar = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-40 z-40" onClick={() => setIsOpen(false)}>
                     <div
                         className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out p-4 z-50"
-                        onClick={(e) => e.stopPropagation()} 
+                        onClick={(e) => e.stopPropagation()}
                     >
                         <div className="flex justify-between items-center">
-                            <span className="font-bold text-lg">Menu</span>
+                            <span className="font-bold text-lg"></span>
                             <button onClick={() => setIsOpen(false)}>
                                 <X size={28} />
                             </button>
@@ -49,7 +49,7 @@ const Navbar = () => {
                                 <li
                                     key={section}
                                     onClick={() => scrollToSection(section)}
-                                    className="hover:bg-pink-300 p-2 rounded cursor-pointer"
+                                    className="hover:bg-pink-700 hover:text-white p-2 rounded cursor-pointer"
                                 >
                                     {section.charAt(0).toUpperCase() + section.slice(1)}
                                 </li>

@@ -2,9 +2,9 @@ import React from "react";
 
 const technicalSkills = {
   "Programming Languages": ["Python", "Java", "C", "HTML", "CSS", "JavaScript"],
-  "Libraries & Frameworks": ["Bootstrap", "Tailwind Css", "jQuery", "React", "Node", "Express", "Next.js"],
+  "Libraries & Frameworks": ["Bootstrap", "Tailwind Css", "JQuery", "React", "Node", "Express", "Next.js"],
   "Tools & Platforms": ["Git", "GitHub", "Figma", "VS Code"],
-  "Databases": ["MySQL", "MongoDB"]
+  "Databases": ["MongoDB", "MySQL"]
 };
 
 const softSkills = [
