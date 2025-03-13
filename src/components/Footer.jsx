@@ -7,7 +7,10 @@ const Footer = () => {
 
                 <div className="w-full flex flex-col md:flex-row items-center justify-center gap-4 p-3 md:px-16 text-center">
 
-                    <p className="font-light text-sm md:text-base">&copy; 2025 All rights reserved.</p>
+                    {/* Copyright */}
+                    <div className="mt-2 md:mt-0 font-light text-sm md:text-base">
+                        &copy; {new Date().getFullYear()} Rednam Madhavi. All rights reserved.
+                    </div>
 
                     <div className="flex items-center gap-4">
                         <a href="https://github.com/Rednam-madhavi" target="_blank" rel="noopener noreferrer">
