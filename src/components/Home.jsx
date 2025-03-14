@@ -7,7 +7,7 @@ const Home = () => {
   };
 
   return (
-    <div className="md:px-[10vw] p-10 pt-0 min-h-[90vh] flex flex-col md:flex-row items-center justify-around text-black w-full py-12">
+    <div className="md:px-[10vw] min-h-[82vh] flex flex-col md:flex-row items-center justify-around text-black w-full">
 
       <div className="text-center md:text-left flex flex-col items-center md:items-start space-y-4">
         <h3 className="text-gray-700 text-2xl md:text-4xl font-light">Hello, I am</h3>
@@ -21,9 +21,9 @@ const Home = () => {
         <a
           href="/resume.pdf"
           target="_blank"
-          className="bg-pink-700 rounded-full px-6 py-3 text-white font-medium flex items-center gap-3 transition-all duration-300 hover:bg-pink-600 hover:scale-105 shadow-md"
+          className="bg-pink-700 rounded-full px-6 py-3 text-white font-medium flex items-center gap-1 transition-all duration-300 hover:bg-pink-8  00 hover:scale-105 shadow-xl"
         >
-          <FileUser size={22} />
+          <FileUser size={26} />
           View Resume
         </a>
 
