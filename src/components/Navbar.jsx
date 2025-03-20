@@ -15,7 +15,7 @@ const Navbar = () => {
 
             <div className="container mx-auto flex justify-between items-center px-3">
 
-                <TbHexagonLetterM size={45} className='text-pink-700'/>
+                <TbHexagonLetterM size={45} className='text-pink-700' />
 
                 <ul className="hidden md:flex gap-5">
                     {['home', 'about', 'skills', 'projects', 'connect'].map((section) => (
@@ -40,10 +40,13 @@ const Navbar = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-40 z-40" onClick={() => setIsOpen(false)}>
 
                     <div
-                        className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50"
+                        className="fixed top-0 left-0 h-full p-3 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <div className="flex justify-between items-center">
+
+                        <div className="flex justify-between items-center border-b border-gray-300 p-2">
+                            <TbHexagonLetterM size={34} className='text-pink-700' />
+
                             <span className="font-bold text-lg"></span>
                             <button onClick={() => setIsOpen(false)}>
                                 <X size={28} />
@@ -65,7 +68,7 @@ const Navbar = () => {
 
                 </div>
             )}
-            
+
         </nav>
     );
 };
