@@ -1,51 +1,79 @@
-import React from "react";
+import React, { useRef } from "react";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
-const technicalSkills = {
-  "Programming Languages": ["Python", "Java", "C", "HTML", "CSS", "JavaScript"],
-  "Libraries & Frameworks": ["Bootstrap", "Tailwind Css", "JQuery", "React", "Node", "Express", "Next.js"],
-  "Tools & Platforms": ["Git", "GitHub", "Figma", "VS Code"],
-  "Databases": ["MongoDB", "MySQL"]
+// Skill images
+const skillImages = {
+  HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  JavaScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  Bootstrap: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+  "Tailwind Css": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+  Python: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  C: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+  PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  JQuery: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+  Node: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  React: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  Express: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg",
+  MongoDB: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  MySQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  GitHub: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  "VS Code": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  Figma: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
 };
 
-const softSkills = [
-  "Communication", "Adaptability", "Critical Thinking",
-  "Team Collaboration", "Self-Motivation", "Time Management",
-  "Problem-Solving", "Leadership", "Creativity"
-];
+const allSkills = Object.keys(skillImages);
 
 const Skills = () => {
+  const scrollRef = useRef(null);
+
   return (
-    <div className="text-black w-full p-6 flex flex-col items-center py-14">
-      <h1 className="text-4xl font-semibold text-center mb-6 text-gray-900">
-        Skills
+    <div className="  text-black w-full py-16 flex flex-col items-center">
+      <h1 className="text-4xl font-semibold text-center mb-6">
+        Technical Skills
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-7xl">
-        <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold text-pink-900 mb-2">Technical Skills</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {Object.entries(technicalSkills).map(([category, skills], index) => (
-              <div key={index} className="bg-white shadow-md rounded-lg p-4">
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">{category}</h3>
-                <ul className="list-disc pl-5 text-gray-900">
-                  {skills.map((skill, skillIndex) => (
-                    <li key={skillIndex} className="text-sm">{skill}</li>
-                  ))}
-                </ul>
+
+      <div className="relative w-full max-w-6xl px-8">
+        {/* Scrollable Row (No scrollbar visible) */}
+        <div
+          ref={scrollRef}
+          className="flex gap-8 overflow-x-auto px-4 pb-2 scroll-smooth "
+          style={{
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
+          {/* Hide scrollbar for Chrome/Safari */}
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              .scroll-container::-webkit-scrollbar {
+                display: none;
+              }
+            `}}
+          />
+
+          {allSkills.map((skill, index) => (
+            <div
+              key={index}
+              className="min-w-[170px] min-h-[200px] flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex flex-col items-center text-center group"
+            >
+              <div className="w-24 h-24 mb-4 flex items-center justify-center">
+                <img
+                  src={skillImages[skill]}
+                  alt={skill}
+                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
-            ))}
-          </div>
+              <span className="text-md font-semibold text-pink-600 bg-pink-50 px-3 py-1.5 rounded-lg group-hover:bg-pink-100 transition-colors duration-300">
+                {skill}
+              </span>
+            </div>
+          ))}
         </div>
 
-        <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold text-pink-900 mb-2">Soft Skills</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {softSkills.map((skill, index) => (
-              <div key={index} className="bg-white shadow-md rounded-lg p-4 text-center">
-                <p className="text-gray-900 text-sm">{skill}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );
