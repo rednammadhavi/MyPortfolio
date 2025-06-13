@@ -22,7 +22,7 @@ const Navbar = () => {
                         <li
                             key={section}
                             onClick={() => scrollToSection(section)}
-                            className="hover:scale-125 transition-all duration-200 cursor-pointer hover:font-semibold hover:text-pink-900 hover:bg-pink-100 rounded-xl p-2"
+                            className="hover:scale-125 transition-all duration-200 cursor-pointer hover:font-semibold hover:text-pink-700 rounded-xl p-2"
                         >
                             {section.charAt(0).toUpperCase() + section.slice(1)}
                         </li>
