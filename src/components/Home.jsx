@@ -21,7 +21,7 @@ const Home = () => {
         <a
           href="/resume.pdf"
           target="_blank"
-          className="bg-pink-700 rounded-full px-6 py-3 text-white font-medium flex items-center gap-1 transition-all duration-300 hover:bg-pink-8  00 hover:scale-105 shadow-xl"
+          className="bg-pink-700 rounded-full px-6 py-3 text-white font-medium flex items-center gap-1 transition-all duration-300 hover:bg-pink-800 hover:scale-105 shadow-xl"
         >
           <FileUser size={26} />
           View Resume
