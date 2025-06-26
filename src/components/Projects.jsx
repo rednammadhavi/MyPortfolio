@@ -2,30 +2,41 @@ import React, { useRef, useState, useEffect } from "react";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 const projects = [
-  // {
-  //   name: "Textify",
-  //   image: "/assets/projects/textify.png",
-  //   description:
-  //     "Textify is a simple text editing app built with React and styled using Bootstrap. It lets users quickly change text case, count words and characters, remove extra spaces, and copy text with one click. The app also includes a dark mode for better readability.",
-  //   tags: ["React", "Bootstrap", "Text Utility"],
-  //   more: "https://github.com/Rednam-madhavi/Textify-SimpleTextUtilsApp",
-  // },
   {
-    name: "EchoNews",
-    image: "/assets/projects/echonews.png",
-    description:
-      "EchoNews is a user-friendly news app built with React and styled using Bootstrap. It delivers real-time news updates and allows users to browse articles by category. Responsive design ensures smooth reading across devices.",
-    tags: ["React", "Bootstrap", "API Integration", "Real-time News Aggregation"],
-    more: "https://github.com/Rednam-madhavi/EchoNews-NewsApplication",
+    name: "BlinkCart",
+    image: "/assets/projects/blinkcart.png",
+    description: "BlinkCart is a dynamic full-stack ecommerce application built using the MERN stack. It features intuitive product browsing, real-time cart and wishlist management, secure user authentication with JWT, and seamless order placement. The responsive UI, styled with Tailwind CSS, ensures an optimized shopping experience across all devices.",
+    tags: ["Fullstack Application", "MERN Stack", "Tailwind CSS", "REST API", "JWT Auth", "Ecommerce"],
+    more: "https://github.com/Rednam-madhavi/BlinkCart-EcommerceApplication"
   },
-  // {
-  //   name: "TaskManager",
-  //   image: "/assets/projects/taskmanager.png",
-  //   description:
-  //     "TaskManager is a lightweight to-do list app built with Vite, React, and Tailwind CSS. It supports add, edit, delete operations with local storage. Perfect for staying organized across devices.",
-  //   tags: ["React", "Tailwind CSS", "To-Do List", "Local Storage"],
-  //   more: "https://github.com/Rednam-madhavi/TaskManager-SimpleToDoApp",
-  // },
+  {
+    name: "LittleLemon",
+    image: "/assets/projects/littlelemon.png",
+    description: "Little Lemon is a modern restaurant website developed using React and Tailwind CSS. It offers an interactive dining experience with features like digital menus and a table booking system. The site is fully responsive, delivering an elegant user experience on both desktop and mobile.",
+    tags: ["Frontend Application", "Vite", "React", "Tailwind CSS", "Restaurant table booking"],
+    more: "https://github.com/Rednam-madhavi/LittleLemon-FoodBookingApplication-Frontend"
+  },
+  {
+    name: "BotNest",
+    image: "/assets/projects/botnest.png",
+    description: "BotNest is a smart AI-powered chatbot application developed using the MERN stack and OpenAI API. It delivers natural, human-like responses for use cases such as virtual assistants, customer support, and productivity tools. The sleek interface is styled with Tailwind CSS and optimized for responsiveness.",
+    tags: ["Fullstack Application", "MERN Stack", "Tailwind CSS", "OpenAI", "Chatbot Application"],
+    more: "https://github.com/Rednam-madhavi/BotNest-AIPoweredChatbotApplicationUsingMern"
+  },
+  {
+    name: "MernHub",
+    image: "/assets/projects/mernhub.png",
+    description: "MernHub is a documentation and resource hub for developers focused on the MERN stack. Built with Vite, React, and Tailwind CSS, it features well-structured guides, tutorials, and examples of real-world applications to accelerate learning and project development.",
+    tags: ["Frontend Application", "Vite", "React", "Tailwind CSS", "Documentation"],
+    more: "https://github.com/Rednam-madhavi/MernHub-DocumentationApplicationForMernDevelopers"
+  },
+  {
+    name: "GenImg",
+    image: "/assets/projects/genimg.png",
+    description: "GenImg is an AI-powered image generator application that converts text prompts into high-quality visuals. Built with the MERN stack and integrated with OpenAI, it's ideal for designers, marketers, and creative professionals. The UI is modern, responsive, and styled using Tailwind CSS.",
+    tags: ["Fullstack Application", "MERN Stack", "Tailwind CSS", "OpenAI", "AI Image Generating Application"],
+    more: "https://github.com/Rednam-madhavi/GenImg-ImageGeneratorUsingOpenAI"
+  },
   // {
   //   name: "SafeOp",
   //   image: "/assets/projects/safeop.png",
@@ -34,38 +45,29 @@ const projects = [
   //   tags: ["React", "Tailwind CSS", "Password Manager", "Local Storage"],
   //   more: "https://github.com/Rednam-madhavi/SafeOp-PasswordManager",
   // },
+  // {
+  //   name: "TaskManager",
+  //   image: "/assets/projects/taskmanager.png",
+  //   description:
+  //     "TaskManager is a lightweight to-do list app built with Vite, React, and Tailwind CSS. It supports add, edit, delete operations with local storage. Perfect for staying organized across devices.",
+  //   tags: ["React", "Tailwind CSS", "To-Do List", "Local Storage"],
+  //   more: "https://github.com/Rednam-madhavi/TaskManager-SimpleToDoApp",
+  // },
   {
-    name: "GenImg",
-    image: "/assets/projects/genimg.png",
-    description:
-      "GenImg is an AI-powered image generator using MERN, Tailwind CSS, and OpenAI. It transforms text prompts into high-quality visuals, useful for creatives, designers, and marketers.",
-    tags: ["MERN Stack", "Tailwind CSS", "OpenAI", "AI Image Generation"],
-    more: "https://github.com/Rednam-madhavi/GenImg-ImageGeneratorUsingAI",
+    name: "EchoNews",
+    image: "/assets/projects/echonews.png",
+    description: "EchoNews is a responsive, real-time news aggregation application built with React and styled using Bootstrap. It leverages NewsAPI.org to fetch and display categorized news articles, offering users a clean and intuitive way to stay updated with current events across devices.",
+    tags: ["Frontend Application", "React", "Bootstrap", "API Integration", "Newsapi.org", "Real-time News Aggregation"],
+    more: "https://github.com/Rednam-madhavi/EchoNews-NewsAggregationApplication"
   },
-  {
-    name: "MernHub",
-    image: "/assets/projects/mernhub.png",
-    description:
-      "MernHub is a developer-focused documentation platform with guides, resources, and real-world MERN stack applications. Built using Vite, React, and Tailwind CSS.",
-    tags: ["Vite", "React", "Tailwind CSS", "Social Media"],
-    more: "https://github.com/Rednam-madhavi/MERN-HUB",
-  },
-  {
-    name: "BotNest",
-    image: "/assets/projects/botnest.png",
-    description:
-      "BotNest is an AI chat app using the MERN stack, Tailwind CSS, and OpenAI. It provides human-like responses ideal for support, productivity, and creative chats.",
-    tags: ["MERN Stack", "Tailwind CSS", "OpenAI", "Chatbot"],
-    more: "https://github.com/Rednam-madhavi/BotNest",
-  },
-  {
-    name: "LittleLemon",
-    image: "/assets/projects/littlelemon.png",
-    description:
-      "Little Lemon is a modern restaurant website built with React and Tailwind CSS. It includes a table booking system and interactive menu for dining experiences.",
-    tags: ["React", "Tailwind CSS", "Restaurant table booking"],
-    more: "https://github.com/Rednam-madhavi/LittleLemon",
-  },
+  // {
+  //   name: "Textify",
+  //   image: "/assets/projects/textify.png",
+  //   description:
+  //     "Textify is a simple text editing app built with React and styled using Bootstrap. It lets users quickly change text case, count words and characters, remove extra spaces, and copy text with one click. The app also includes a dark mode for better readability.",
+  //   tags: ["React", "Bootstrap", "Text Utility"],
+  //   more: "https://github.com/Rednam-madhavi/Textify-SimpleTextUtilsApp",
+  // },
 ];
 
 const Projects = () => {
