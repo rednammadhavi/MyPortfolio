@@ -39,7 +39,7 @@ const Home = () => {
               icon: "/assets/github.svg",
             },
             {
-              href: "https://www.linkedin.com/in/naga-madhavi-rednam-242825318/",
+              href: "https://www.linkedin.com/in/rednammadhavi/",
               alt: "LinkedIn",
               icon: "/assets/linkedin.svg",
             },
