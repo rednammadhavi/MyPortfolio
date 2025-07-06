@@ -25,49 +25,60 @@ const skillImages = {
   Figma: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
 };
 
-const allSkills = Object.keys(skillImages);
-
 const Skills = () => {
   const scrollRef = useRef(null);
+  const allSkills = Object.keys(skillImages);
+
+  const scroll = (direction) => {
+    const { current } = scrollRef;
+    if (direction === "left") {
+      current.scrollBy({ left: -300, behavior: "smooth" });
+    } else {
+      current.scrollBy({ left: 300, behavior: "smooth" });
+    }
+  };
 
   return (
-    <div className="  text-black w-full py-16 flex flex-col items-center">
-      <h1 className="text-4xl font-semibold text-center mb-6">
+    <div className="w-full py-16 flex flex-col items-center">
+      <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
         Technical Skills
-      </h1>
+      </h2>
 
       <div className="relative w-full max-w-6xl px-8">
-        {/* Scrollable Row (No scrollbar visible) */}
+        {/* Left Scroll Button - hidden on large screens */}
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white border border-pink-200 shadow-md rounded-full p-2 lg:hidden"
+        >
+          <AiOutlineArrowLeft className="text-pink-600" size={22} />
+        </button>
+
+        {/* Right Scroll Button - hidden on large screens */}
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white border border-pink-200 shadow-md rounded-full p-2 lg:hidden"
+        >
+          <AiOutlineArrowRight className="text-pink-600" size={22} />
+        </button>
+
+        {/* Skills Container */}
         <div
           ref={scrollRef}
-          className="flex gap-8 overflow-x-auto px-4 pb-2 scroll-smooth "
-          style={{
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-          }}
+          className="flex gap-8 overflow-x-auto scroll-smooth scrollbar-hide px-6 pb-4"
         >
-          {/* Hide scrollbar for Chrome/Safari */}
-          <style dangerouslySetInnerHTML={{
-            __html: `
-              .scroll-container::-webkit-scrollbar {
-                display: none;
-              }
-            `}}
-          />
-
           {allSkills.map((skill, index) => (
             <div
               key={index}
-              className="min-w-[170px] min-h-[200px] flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex flex-col items-center text-center group"
+              className="min-w-[140px] flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex flex-col items-center"
             >
-              <div className="w-24 h-24 mb-4 flex items-center justify-center">
+              <div className="w-20 h-20 mb-3">
                 <img
                   src={skillImages[skill]}
                   alt={skill}
                   className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <span className="text-md font-semibold text-pink-600 bg-pink-50 px-3 py-1.5 rounded-lg group-hover:bg-pink-100 transition-colors duration-300">
+              <span className="text-sm font-medium text-pink-600 text-center">
                 {skill}
               </span>
             </div>
