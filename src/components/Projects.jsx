@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import React from "react";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const projects = [
   {
@@ -27,14 +27,6 @@ const projects = [
     more: "https://github.com/rednammadhavi/DocumentationApplicationForMernDevelopers",
   },
   {
-    name: "Image Generator",
-    image: "/assets/projects/imagegenerator.png",
-    description:
-      "An AI-powered web application that transforms text prompts into unique images using OpenAI's API.",
-    tags: ["MERN Stack", "Tailwind CSS", "OpenAI", "Image Generator"],
-    more: "https://github.com/rednammadhavi/ImageGeneratorUsingOpenAI",
-  },
-  {
     name: "News Aggregation App",
     image: "/assets/projects/newsaggapp.png",
     description:
@@ -45,72 +37,36 @@ const projects = [
 ];
 
 const Projects = () => {
-  const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -320 : 320,
-      behavior: "smooth",
-    });
-  };
-
-  useEffect(() => {
-    const handleEsc = (e) => e.key === "Escape" && scrollRef.current?.blur();
-    window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
-  }, []);
-
   return (
-    <section className="w-full px-4 py-16 text-black relative">
+    <section className="w-full px-6 sm:px-10 py-16 flex flex-col items-center scroll-mt-20">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
           Projects
         </h2>
 
-        {/* Left Scroll Button - hidden on large screens */}
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white border border-pink-200 shadow-md rounded-full p-2 lg:hidden"
-        >
-          <AiOutlineArrowLeft className="text-pink-600" size={22} />
-        </button>
-
-        {/* Right Scroll Button - hidden on large screens */}
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white border border-pink-200 shadow-md rounded-full p-2 lg:hidden"
-        >
-          <AiOutlineArrowRight className="text-pink-600" size={22} />
-        </button>
-
-
-        {/* Scrollable Cards (All Screens) */}
-        <div
-          ref={scrollRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide px-4"
-          style={{ scrollbarWidth: "none" }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="min-w-[280px] sm:min-w-[300px] max-w-[320px] bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-pink-100 flex-shrink-0"
+              className="bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-300 border border-pink-100 transform hover:-translate-y-1"
             >
-              <div className="p-4 bg-gray-50 rounded-t-2xl">
+              {/* Image Container with consistent size and full image display */}
+              <div className="bg-gray-50 rounded-t-2xl overflow-hidden flex items-center justify-center h-48">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-40 object-contain border border-gray-200 rounded-xl"
+                  className="max-h-full object-contain p-2 rounded-2xl"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-pink-700 mb-2">
+
+              <div className="p-5">
+                <h3 className="text-lg text-center font-semibold text-pink-700 mb-2">
                   {project.name}
                 </h3>
-                <p className="text-gray-600 text-sm mb-3 text-justify">
+                <p className="text-gray-700 text-sm mb-4 leading-relaxed text-justify">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-3">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
