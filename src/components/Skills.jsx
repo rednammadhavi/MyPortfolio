@@ -51,7 +51,7 @@ const Skills = () => {
                   loading="lazy"
                   decoding="async"
                 />
-                <span className="text-xs sm:text-sm md:text-base font-medium text-gray-800text-center">
+                <span className="text-xs sm:text-sm md:text-base font-medium text-gray-800 text-center">
                   {skill}
                 </span>
               </div>
