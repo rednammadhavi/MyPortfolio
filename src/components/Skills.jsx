@@ -42,7 +42,7 @@ const Skills = () => {
             {duplicatedSkills.map((skill, index) => (
               <div
                 key={`${skill}-${index}`}
-                className="skill-card w-[120px] sm:w-[130px] md:w-[140px] lg:w-[150px] bg-white rounded-xl shadow-lg hover:shadow-xl transition-transform hover:scale-105 duration-300 flex flex-col items-center justify-center p-6 aspect-square"
+                className="skill-card w-[120px] sm:w-[130px] md:w-[140px] lg:w-[150px] bg-white rounded-xl shadow-lg hover:shadow-xl transition-transform hover:scale-105 duration-300 flex flex-col items-center justify-center p-6 aspect-square mb-2"
               >
                 <img
                   src={skillImages[skill]}
