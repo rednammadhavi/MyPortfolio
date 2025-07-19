@@ -1,13 +1,11 @@
-import React, { useRef } from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import React from "react";
 
-// Skill images
 const skillImages = {
   HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
   JavaScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   Bootstrap: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-  "Tailwind Css": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+  "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   Python: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
   C: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
@@ -23,70 +21,69 @@ const skillImages = {
   GitHub: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   "VS Code": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
   Figma: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+  Postman: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
 };
 
 const Skills = () => {
-  const scrollRef = useRef(null);
-  const allSkills = Object.keys(skillImages);
-
-  const scroll = (direction) => {
-    const { current } = scrollRef;
-    if (direction === "left") {
-      current.scrollBy({ left: -300, behavior: "smooth" });
-    } else {
-      current.scrollBy({ left: 300, behavior: "smooth" });
-    }
-  };
+  const skills = Object.keys(skillImages);
+  const duplicatedSkills = [...skills, ...skills];
 
   return (
-    <div className="w-full py-16 flex flex-col items-center">
-      <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
-        Technical Skills
-      </h2>
+    <section className="w-full px-4 sm:px-10 py-16 flex flex-col items-center scroll-mt-20">
 
-      <div className="relative w-full max-w-6xl px-8">
-        {/* Left Scroll Button - hidden on large screens */}
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white border border-pink-200 shadow-md rounded-full p-2 lg:hidden"
-        >
-          <AiOutlineArrowLeft className="text-pink-600" size={22} />
-        </button>
+      <div className="max-w-7xl w-full mx-auto">
 
-        {/* Right Scroll Button - hidden on large screens */}
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white border border-pink-200 shadow-md rounded-full p-2 lg:hidden"
-        >
-          <AiOutlineArrowRight className="text-pink-600" size={22} />
-        </button>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">
+          Technical Skills
+        </h2>
 
-        {/* Skills Container */}
-        <div
-          ref={scrollRef}
-          className="flex gap-8 overflow-x-auto scroll-smooth scrollbar-hide px-6 pb-4"
-        >
-          {allSkills.map((skill, index) => (
-            <div
-              key={index}
-              className="min-w-[140px] flex-shrink-0 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex flex-col items-center"
-            >
-              <div className="w-20 h-20 mb-3">
+        <div className="relative overflow-hidden">
+          <div className="animate-scroll flex gap-6 w-max">
+            {duplicatedSkills.map((skill, index) => (
+              <div
+                key={`${skill}-${index}`}
+                className="skill-card w-[120px] sm:w-[130px] md:w-[140px] lg:w-[150px] bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition-transform hover:scale-105 duration-300 flex flex-col items-center justify-center p-6 aspect-square"
+              >
                 <img
                   src={skillImages[skill]}
-                  alt={skill}
-                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                  alt={`${skill} logo`}
+                  className="w-12 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 mb-3 object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
+                <span className="text-xs sm:text-sm md:text-base font-medium text-gray-800 dark:text-pink-300 text-center">
+                  {skill}
+                </span>
               </div>
-              <span className="text-sm font-medium text-pink-600 text-center">
-                {skill}
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
       </div>
-    </div>
+
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        .animate-scroll {
+          animation: scroll 20s linear infinite;
+        }
+
+        @media (max-width: 640px) {
+          .animate-scroll {
+            animation-duration: 20s;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .animate-scroll {
+            animation: none;
+          }
+        }
+`}</style>
+
+    </section>
   );
 };
 
